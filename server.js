@@ -22,7 +22,7 @@ router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });   
 });
 
-// more routes for our API will happen here
+// Here is where I am making the api routes
 router.get('/user/:id', function(req, res) {
 	var theirId = req.params.id;
 	ArtistFunctions.setName(theirId, function(theirName){
