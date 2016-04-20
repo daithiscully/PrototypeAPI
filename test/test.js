@@ -52,3 +52,17 @@ describe('GET /api/user/3', function(){
       });
   });
 });
+
+describe('GET /api/user/4', function(){
+  it('respond with Iron Maiden as the name', function(done){
+    agent
+      .get('/api/user/4')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done)
+      .expect({
+      	"id": "4",
+      	"name": "Iron Maiden"
+      });
+  });
+});
