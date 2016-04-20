@@ -33,11 +33,11 @@ router.get('/username/:id', function(req, res) {
 	}); 
 });
 
-router.get('/useremail/:id', function(req, res) {
-	var theirId = req.params.id;
-	ArtistFunctions.setEmail(theirId, function(theirEmail){
+router.get('/useremail/:name', function(req, res) {
+	var theirName = req.params.name;
+	ArtistFunctions.setEmail(theirName, function(theirEmail){
 		res.json({ 
-	    	id: theirId,
+	    	name: theirName,
 	    	email: theirEmail
 		}); 
 	}); 

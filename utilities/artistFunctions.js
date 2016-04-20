@@ -24,23 +24,23 @@ var setName = function(theirId, callback){
 	callback(theirName);
 };
 
-var setEmail = function(theirId, callback){
+var setEmail = function(theirName, callback){
 	var theirEmail;
 	switch(theirId) {
-	    case '1':
+	    case 'PinkFloyd':
 	        theirEmail = 'PinkFloyd@gmail.com';
 	        break;
-	    case '2':
+	    case 'LedZeppelin':
 	        theirEmail = 'LedZeppelin@gmail.com';
 	        break;
-	    case '3':
+	    case 'Metallica':
 	        theirEmail = 'Metallica@gmail.com';
 	        break;
-	    case '4':
+	    case 'IronMaiden':
 	        theirEmail = 'IronMaiden@gmail.com';
 	        break;
-	    case '5':
-	        theirEmail = 'GunsnRoses@gmail.com';
+	    case 'Guns\'nRoses':
+	        theirEmail = 'Guns\'nRoses@gmail.com';
 	        break;
 	    default:
 	        theirEmail = 'Unnamed@gmail.com';
