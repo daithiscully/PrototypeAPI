@@ -69,7 +69,7 @@ describe('GET /api/useremail/2', function(){
       .expect(200, done)
       .expect({
       	"id": "2",
-      	"name": "LedZeppelin@gmail.com"
+      	"email": "LedZeppelin@gmail.com"
       });
   });
 });
@@ -83,7 +83,7 @@ describe('GET /api/useremail/3', function(){
       .expect(200, done)
       .expect({
       	"id": "3",
-      	"name": "Metallica@gmail.com"
+      	"email": "Metallica@gmail.com"
       });
   });
 });
