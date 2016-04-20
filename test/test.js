@@ -91,12 +91,12 @@ describe('GET /api/useremail/Metallica', function(){
 describe('GET /api/useremail/IronMaiden', function(){
   it('respond with IronMaiden@gmail.com as the email', function(done){
     agent
-      .get('/api/useremail/4')
+      .get('/api/useremail/IronMaiden')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done)
       .expect({
-      	"name": "4",
+      	"name": "IronMaiden",
       	"email": "IronMaiden@gmail.com"
       });
   });
