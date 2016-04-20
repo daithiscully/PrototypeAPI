@@ -26,7 +26,7 @@ var setName = function(theirId, callback){
 
 var setEmail = function(theirName, callback){
 	var theirEmail;
-	switch(theirEmail) {
+	switch(theirName) {
 	    case 'PinkFloyd':
 	        theirEmail = 'PinkFloyd@gmail.com';
 	        break;

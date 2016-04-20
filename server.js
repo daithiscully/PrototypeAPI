@@ -35,6 +35,7 @@ router.get('/username/:id', function(req, res) {
 
 router.get('/useremail/:name', function(req, res) {
 	var theirName = req.params.name;
+	console.log('Their Name ---- = ', theirName)
 	ArtistFunctions.setEmail(theirName, function(theirEmail){
 		res.json({ 
 	    	name: theirName,
