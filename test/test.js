@@ -60,35 +60,35 @@ describe('GET /api/username/4', function(){
 });
 
 // Tests for getting the Emailuseremail
-describe('GET /api/useremail/2', function(){
+describe('GET /api/useremail/LedZeppelin', function(){
   it('respond with LedZeppelin@gmail.com as the email', function(done){
     agent
-      .get('/api/useremail/2')
+      .get('/api/useremail/LedZeppelin')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done)
       .expect({
-      	"id": "2",
+      	"name": "LedZeppelin",
       	"email": "LedZeppelin@gmail.com"
       });
   });
 });
 
-describe('GET /api/useremail/3', function(){
+describe('GET /api/useremail/Metallica', function(){
   it('respond with Metallica@gmail.com as the email', function(done){
     agent
-      .get('/api/useremail/3')
+      .get('/api/useremail/Metallica')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done)
       .expect({
-      	"id": "3",
+      	"name": "Metallica",
       	"email": "Metallica@gmail.com"
       });
   });
 });
 
-describe('GET /api/useremail/4', function(){
+describe('GET /api/useremail/IronMaiden', function(){
   it('respond with IronMaiden@gmail.com as the email', function(done){
     agent
       .get('/api/useremail/4')
@@ -96,7 +96,7 @@ describe('GET /api/useremail/4', function(){
       .expect('Content-Type', /json/)
       .expect(200, done)
       .expect({
-      	"id": "4",
+      	"name": "4",
       	"email": "IronMaiden@gmail.com"
       });
   });
