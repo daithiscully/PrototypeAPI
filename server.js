@@ -23,12 +23,22 @@ router.get('/', function(req, res) {
 });
 
 // Here is where I am making the api routes
-router.get('/user/:id', function(req, res) {
+router.get('/username/:id', function(req, res) {
 	var theirId = req.params.id;
 	ArtistFunctions.setName(theirId, function(theirName){
 		res.json({ 
 	    	id: theirId,
 	    	name: theirName
+		}); 
+	}); 
+});
+
+router.get('/useremail/:id', function(req, res) {
+	var theirId = req.params.id;
+	ArtistFunctions.setEmail(theirId, function(theirEmail){
+		res.json({ 
+	    	id: theirId,
+	    	email: theirEmail
 		}); 
 	}); 
 });

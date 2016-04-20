@@ -16,19 +16,11 @@ var should = require('chai').should(),
 
 var agent = request.agent(app);
 
-describe('Math', function () {
-  describe('#max', function () {
-    it('returns the biggest number from the arguments', function () {
-      var max = Math.max(1, 2, 10, 3);
-      expect(max).to.equal(10);
-    });
-  });
-});
-
-describe('GET /api/user/2', function(){
+// Tests for getting the Username
+describe('GET /api/username/2', function(){
   it('respond with Led Zeppelin as the name', function(done){
     agent
-      .get('/api/user/2')
+      .get('/api/username/2')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done)
@@ -39,10 +31,10 @@ describe('GET /api/user/2', function(){
   });
 });
 
-describe('GET /api/user/3', function(){
+describe('GET /api/username/3', function(){
   it('respond with Metallica as the name', function(done){
     agent
-      .get('/api/user/3')
+      .get('/api/username/3')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done)
@@ -53,16 +45,59 @@ describe('GET /api/user/3', function(){
   });
 });
 
-describe('GET /api/user/4', function(){
+describe('GET /api/username/4', function(){
   it('respond with Iron Maiden as the name', function(done){
     agent
-      .get('/api/user/4')
+      .get('/api/username/4')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done)
       .expect({
       	"id": "4",
       	"name": "Iron Maiden"
+      });
+  });
+});
+
+// Tests for getting the Emailuseremail
+describe('GET /api/useremail/2', function(){
+  it('respond with LedZeppelin@gmail.com as the email', function(done){
+    agent
+      .get('/api/useremail/2')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done)
+      .expect({
+      	"id": "2",
+      	"name": "LedZeppelin@gmail.com"
+      });
+  });
+});
+
+describe('GET /api/useremail/3', function(){
+  it('respond with Metallica@gmail.com as the email', function(done){
+    agent
+      .get('/api/useremail/3')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done)
+      .expect({
+      	"id": "3",
+      	"name": "Metallica@gmail.com"
+      });
+  });
+});
+
+describe('GET /api/useremail/4', function(){
+  it('respond with IronMaiden@gmail.com as the email', function(done){
+    agent
+      .get('/api/useremail/4')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done)
+      .expect({
+      	"id": "4",
+      	"email": "IronMaiden@gmail.com"
       });
   });
 });
